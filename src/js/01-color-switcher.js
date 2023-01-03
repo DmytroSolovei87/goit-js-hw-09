@@ -15,12 +15,12 @@ function onStartBtnClick() {
   intervalId = setInterval(() => {
     bodyRef.style.backgroundColor = `${getRandomHexColor()}`;
   }, 1000);
-  startBtnRef.setAttribute('disabled', 'disabled');
-  stopBtnRef.removeAttribute('disabled');
+  startBtnRef.disabled = true;
+  stopBtnRef.disabled = false;
 }
 
 function onStopBtnClick() {
   clearInterval(intervalId);
-  stopBtnRef.setAttribute('disabled', 'disabled');
-  startBtnRef.removeAttribute('disabled');
+  startBtnRef.disabled = false;
+  stopBtnRef.disabled = true;
 }
